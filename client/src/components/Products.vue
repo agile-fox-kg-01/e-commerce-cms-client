@@ -1,8 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <div class="">
-      <h2>Ichlasul Amal</h2>
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>List All Product</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, est. Repellendus nisi voluptatum, placeat commodi laborum vel nesciunt exercitationem nam? </p>
+
       <table class="table table-striped">
         <thead>
           <tr>
@@ -23,6 +24,9 @@
         </tbody>
       </table>
     </div>
+    <div class="col-sm-4" style="text-align:center">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -30,7 +34,7 @@
 import ProductCard from '../components/ProductCard'
 
 export default {
-  name: 'About',
+  name: 'Products',
   components: {
     ProductCard
   },
