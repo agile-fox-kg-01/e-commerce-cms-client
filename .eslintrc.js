@@ -5,16 +5,13 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    '@vue/standard',
-    'plugin:vue/vue3-recommended'
+    '@vue/standard'
   ],
   parserOptions: {
     parser: 'babel-eslint'
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    "function-paren-newline": [ "error", "never" ]
-
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
 }

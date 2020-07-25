@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kaushan+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kalam&family=Kaushan+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -14,12 +16,21 @@
       integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
+  <style>
+   #app{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px;    
+   }
+   body{
+    
+   }
+  </style>
   <body>
+      <div id="app"></div>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>
