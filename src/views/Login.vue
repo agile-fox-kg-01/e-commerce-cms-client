@@ -87,6 +87,10 @@ export default {
 </script>
 
 <style scoped>
+.login {
+  padding: 20px;
+}
+
 .form-signin {
     width: 100%;
     max-width: 460px;

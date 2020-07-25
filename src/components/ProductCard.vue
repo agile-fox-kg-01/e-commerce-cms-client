@@ -9,9 +9,9 @@
       </a>
     </td>
     <td>
-      <button @click="toProductPage" class="btn btn-primary mx-1">Detail</button>
-      <button @click="edit" class="btn btn-warning mx-1">Edit</button>
-      <button @click="deleteProduct" class="btn btn-danger mx-1">Delete</button>
+      <button @click="toProductPage" class="btn btn-primary m-1">Detail</button>
+      <button @click="edit" class="btn btn-warning m-1">Edit</button>
+      <button @click="deleteProduct" class="btn btn-danger m-1">Delete</button>
     </td>
   </tr>
 </template>
@@ -39,6 +39,9 @@ export default {
 <style>
 .img-thumbnail {
   height: 100px;
+  width: 100;
+  max-width:100px;
+  max-height:100px;
 }
 
 .img-thumbnail:hover {

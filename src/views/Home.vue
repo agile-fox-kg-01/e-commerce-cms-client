@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="card product-list">
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 table-responsive">
                 <table class="table">
                   <thead>
                     <tr>

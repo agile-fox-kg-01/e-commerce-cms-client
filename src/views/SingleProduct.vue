@@ -3,23 +3,23 @@
     <Navigation></Navigation>
     <div class="container-fluid">
         <div class="row product-area">
-            <div class="col-5">
+            <div class="col-lg-5 col-md-12">
                 <div class="card">
                     <div class="img-square-wrapper">
                         <a :href="product.image_url" class="btn"><img class="rounded" :src="product.image_url" alt="Card image cap"></a>
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-lg-7">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-lg-12 col-md-12">
                         <div class="card">
                             <h1>{{ product.name }}</h1>
                             <h1>{{ product.price }}</h1>
                             <h1>{{ product.stock }}</h1>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-lg-12">
                         <div class="card action-button">
                           <button @click="edit" class="btn btn-lg btn-primary btn-block">Edit</button>
                           <button @click="deleteProduct" class="btn btn-lg btn-primary btn-block">Delete</button>
@@ -69,19 +69,50 @@ export default {
     text-transform: uppercase;
 }
 
-.product-area {
-    margin: 50px 100px 50px 100px;
-    padding: 16px 50px 16px 50px;
+@media (min-width: 100px) {
+  .product-area {
+    margin: 0px 10px 50px 10px;
+    padding: 16px 10px 16px 10px;
+    background-color: white;
     text-align: center;
+  }
+
+  .rounded {
+    max-width:100%;
+    max-height:100%;
+  }
+}
+
+@media (min-width: 500px) {
+  .product-area {
+    margin: 0px 10px 50px 10px;
+    padding: 16px 20px 16px 20px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .rounded {
+    max-width:100%;
+    max-height:100%;
+  }
+}
+
+@media (min-width: 930px) {
+  .product-area {
+    margin: 0px 70px 50px 70px;
+    padding: 16px 30px 16px 30px;
+    background-color: white;
+    text-align: center;
+  }
+
+  .rounded {
+    max-width:100%;
+    max-height:100%;
+  }
 }
 
 .img-square-wrapper {
     padding: 20px;
-}
-
-.rounded {
-    width:350px;
-    height:350px;
 }
 
 .rounded:hover {

@@ -31,8 +31,8 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary float-left mx-2">Add</button>
-                        <router-link to="/" class="btn btn-primary float-left">Back</router-link>
+                        <button type="submit" class="btn btn-primary float-left m-1">Add</button>
+                        <router-link to="/" class="btn btn-primary float-left m-1">Back</router-link>
                     </div>
                 </div>
             </form>
@@ -76,10 +76,30 @@ export default {
     text-transform: uppercase;
 }
 
-.product-area {
-    margin: 0px 300px 50px 300px;
+@media (min-width: 100px) {
+  .product-area {
+    margin: 0px 10px 50px 10px;
+    padding: 16px 10px 16px 10px;
+    background-color: white;
+    text-align: center;
+  }
+}
+
+@media (min-width: 500px) {
+  .product-area {
+    margin: 0px 100px 50px 100px;
+    padding: 16px 20px 16px 20px;
+    background-color: white;
+    text-align: center;
+  }
+}
+
+@media (min-width: 930px) {
+  .product-area {
+    margin: 0px 250px 50px 250px;
     padding: 16px 50px 16px 50px;
     background-color: white;
     text-align: center;
+  }
 }
 </style>

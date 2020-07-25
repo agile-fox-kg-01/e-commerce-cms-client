@@ -1,27 +1,24 @@
 <template>
-    <div class="header">
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navb" class="navbar-collapse collapse hide">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <router-link to="/" class="nav-link">Home</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/add" class="nav-link">Add Product</router-link>
-                    </li>
-                </ul>
+  <div class="header">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+      <div id="navb" class="navbar-collapse">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <router-link to="/" class="nav-link">Home</router-link>
+              </li>
+              <li>
+                  <router-link to="/add" class="nav-link">Add Product</router-link>
+              </li>
+          </ul>
 
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a @click="logout" class="btn nav-link">logout</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+          <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a @click="logout" class="btn nav-link">logout</a>
+              </li>
+          </ul>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
