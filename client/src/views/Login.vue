@@ -38,17 +38,8 @@ export default {
         email: this.email,
         password: this.password
       }
-      // console.log('Login line 34 :' + userInput)
       this.$store.dispatch('postLogin', userInput)
     }
-  },
-  computed: {
-    getUsername () {
-      return this.$store.state.username
-    }
-  },
-  created () {
-    this.username = this.getUsername
   }
 }
 </script>

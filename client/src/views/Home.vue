@@ -6,7 +6,7 @@
       </div>
       <div class="mynavigasi">
         <a href="" class="btn btn-primary">Created by <img src="../assets/logo.png" alt="" width="30" height="30" ></a>
-        <a href="" class="btn btn-danger" @click="logout">Logout</a>
+        <a href="" class="btn btn-danger" @click.prevent="logout">Logout</a>
       </div>
     </div>
     <Sidebar />
@@ -24,6 +24,7 @@ export default {
   methods: {
     logout () {
       localStorage.removeItem('token')
+      this.$router.push('/login')
     }
   }
 }

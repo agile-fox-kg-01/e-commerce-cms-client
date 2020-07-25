@@ -21,12 +21,6 @@ export default new Vuex.Store({
   },
   actions: {
     fetchProducts ({ commit }) {
-      // axios
-      //   .get('/products')
-      //   .then(({ data }) => {
-      //     commit('FETCH_PRODUCTS', data)
-      //   })
-      //   .catch(console.log)
       axios({
         methods: 'GET',
         url: '/products',
@@ -40,13 +34,7 @@ export default new Vuex.Store({
         .catch(console.log)
     },
     fetchProduct ({ commit }, payload) {
-      // console.log('fetch product' + payload.id)
-      // axios
-      //   .get('/products/' + payload.id)
-      //   .then(({ data }) => {
-      //     commit('FETCH_PRODUCT', data)
-      //   })
-      //   .catch(console.log)
+      console.log(localStorage.getItem('token'))
       axios({
         methods: 'GET',
         url: `/products/${payload.id}`,
@@ -56,18 +44,20 @@ export default new Vuex.Store({
 
       })
         .then(({ data }) => {
-          commit('FETCH_PRODUCTS', data)
+          console.log(data)
+          commit('FETCH_PRODUCT', data)
         })
         .catch(console.log)
     },
     postLogin (_, payload) {
-      console.log(payload)
+      // console.log(payload)
       axios
-        .post('/users/login/', {
+        .post('/users/login', {
           email: payload.email,
           password: payload.password
         })
         .then(({ data }) => {
+          console.log(data.token)
           localStorage.setItem('token', data.token)
           router.push({ path: '/' })
         })
@@ -89,6 +79,7 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
+          this.state.fetchProducts
           router.push({ path: '/products' })
         })
         .catch(console.log)
@@ -103,6 +94,7 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
+          this.$store.state.fetchProduct
           router.push({ path: '/products' })
         })
         .catch(console.log)
