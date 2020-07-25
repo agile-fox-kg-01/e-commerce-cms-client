@@ -21,19 +21,42 @@ export default new Vuex.Store({
   },
   actions: {
     fetchProducts ({ commit }) {
-      axios
-        .get('/products')
+      // axios
+      //   .get('/products')
+      //   .then(({ data }) => {
+      //     commit('FETCH_PRODUCTS', data)
+      //   })
+      //   .catch(console.log)
+      axios({
+        methods: 'GET',
+        url: '/products',
+        headers: {
+          token: localStorage.getItem('token')
+        }
+      })
         .then(({ data }) => {
           commit('FETCH_PRODUCTS', data)
         })
         .catch(console.log)
     },
     fetchProduct ({ commit }, payload) {
-      console.log('fetch product' + payload.id)
-      axios
-        .get('/products/' + payload.id)
+      // console.log('fetch product' + payload.id)
+      // axios
+      //   .get('/products/' + payload.id)
+      //   .then(({ data }) => {
+      //     commit('FETCH_PRODUCT', data)
+      //   })
+      //   .catch(console.log)
+      axios({
+        methods: 'GET',
+        url: `/products/${payload.id}`,
+        headers: {
+          token: localStorage.getItem('token')
+        }
+
+      })
         .then(({ data }) => {
-          commit('FETCH_PRODUCT', data)
+          commit('FETCH_PRODUCTS', data)
         })
         .catch(console.log)
     },
@@ -52,26 +75,57 @@ export default new Vuex.Store({
     },
     updateProduct (_, payload) {
       console.log(payload)
-      // axios
-      //   .patch(`/products/:${this.$route.params.id}`, {
-      //     name: payload.name,
-      //     image_url: payload.image_url,
-      //     price: payload.price,
-      //     stock: payload.stock
-      //   })
-      //   .then(({ data }) => {
-      //     router.push({ path: '/products' })
-      //   })
-      //   .catch(console.log)
+      axios({
+        method: 'PATCH',
+        url: `/products/${payload.id}`,
+        headers: {
+          token: localStorage.getItem('token')
+        },
+        data: {
+          name: payload.name,
+          image_url: payload.image_url,
+          price: payload.price,
+          stock: payload.stock
+        }
+      })
+        .then(({ data }) => {
+          router.push({ path: '/products' })
+        })
+        .catch(console.log)
     },
-    deleteProduct () {
-      console.log('delete ' + this.$route.params.id)
-      // axios
-      //   .delete(`/products/${this.$route.params.id}`)
-      //   .then(({ data }) => {
-      //     router.push({ path: '/products' })
-      //   })
-      //   .catch(console.log)
+    deleteProduct (_, payload) {
+      console.log(payload)
+      axios({
+        method: 'DELETE',
+        url: `/products/${payload.id}`,
+        headers: {
+          token: localStorage.getItem('token')
+        }
+      })
+        .then(({ data }) => {
+          router.push({ path: '/products' })
+        })
+        .catch(console.log)
+    },
+    addProduct (_, payload) {
+      // console.log(payload) berhasil
+      axios({
+        method: 'POST',
+        url: '/products/',
+        headers: {
+          token: localStorage.getItem('token')
+        },
+        data: {
+          name: payload.name,
+          image_url: payload.image_url,
+          price: payload.price,
+          stock: payload.stock
+        }
+      })
+        .then(({ data }) => {
+          router.push({ path: '/products' })
+        })
+        .catch(console.log)
     }
   },
   modules: {

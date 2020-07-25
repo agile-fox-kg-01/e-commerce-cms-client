@@ -18,6 +18,9 @@ export default {
   },
   methods: {
     goToDetail () {
+      this.$store.dispatch('fetchProduct', {
+        id: this.product.id
+      })
       this.$router.push({ path: `/products/${this.product.id}` })
     }
   }

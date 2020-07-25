@@ -1,8 +1,8 @@
 <template>
   <div class="row">
     <div class="col-sm-3 mysidebar">
-      <router-link :to="{ name: 'Products' }">All Product</router-link>
-      <router-link :to="{ name: 'Home' }">Add Product</router-link>
+      <router-link :to="{ name: 'Products' }" class="buttonSidebar">All Product</router-link>
+      <router-link :to="{ name: 'Add Product' }" class="buttonSidebar">Add Product</router-link>
     </div>
     <div class="col-sm-9">
       <div class="header">

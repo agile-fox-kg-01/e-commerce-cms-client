@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import DetailCard from '../components/DetailCard.vue'
 import Products from '../components/Products.vue'
+import AddProduct from '../components/AddProduct.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
             component: DetailCard
           }
         ]
+      },
+      {
+        path: 'add-product',
+        name: 'Add Product',
+        component: AddProduct
       }
     ]
   },

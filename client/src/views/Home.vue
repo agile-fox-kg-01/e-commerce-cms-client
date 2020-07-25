@@ -1,25 +1,15 @@
 <template>
   <div class="home">
-    <!-- Navbar -->
     <div class="mynavbar">
       <div class="mylogo">
         <p>MYLOGO</p>
       </div>
       <div class="mynavigasi">
         <a href="" class="btn btn-primary">Created by <img src="../assets/logo.png" alt="" width="30" height="30" ></a>
-        <a href="" class="btn btn-danger">Logout</a>
+        <a href="" class="btn btn-danger" @click="logout">Logout</a>
       </div>
     </div>
     <Sidebar />
-    <!-- <div class="row">
-      <Sidebar />
-      <div class="col-sm-9">
-        <div class="header">
-          <marquee behavior="" direction="" loop="5">WELCOME BACK ADMIN. MARQUEE AKAN BERPUTAR 5 KALI LALU MENGHILANG</marquee>
-        </div>
-        <router-view></router-view>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -30,6 +20,11 @@ export default {
   name: 'Home',
   components: {
     Sidebar
+  },
+  methods: {
+    logout () {
+      localStorage.removeItem('token')
+    }
   }
 }
 </script>
@@ -74,6 +69,17 @@ export default {
   background-color: #8d8741;
   display: flex;
   flex-direction: column;
+  padding-top: 0px;
+  padding-left: 30px ;
+}
+.mysidebar .buttonSidebar {
+  /* border: #f1df13 2px solid; */
+  border-radius: 10px ;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  /* padding: 10px 20px; */
 }
 .mysidebar a:hover{
   text-decoration: unset;

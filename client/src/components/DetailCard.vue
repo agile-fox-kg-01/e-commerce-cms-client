@@ -2,7 +2,6 @@
   <div class="card" style="width: 18rem;">
     <div class="mydetailheader">
       <p>Detail</p>
-      <p>Close</p>
     </div>
     <img :src="product.image_url" class="card-img-top" alt="...">
     <form @submit.prevent="updateProduct" action="" class="align-center" >
@@ -27,7 +26,7 @@
         <input v-model="stock" type="text" >
       </div>
       <button type="submit" class="btn btn-info">Update</button>
-      <a @click="deleteProduct" href="" class="btn btn-danger ml-4">Delete</a>
+      <a @click.prevent="deleteProduct" class="btn btn-danger ml-4">Delete</a>
     </form>
   </div>
 </template>
@@ -44,9 +43,6 @@ export default {
     }
   },
   methods: {
-    closeDetail () {
-
-    },
     fetchProduct () {
       this.$store.dispatch('fetchProduct', {
         id: this.$route.params.id
@@ -62,7 +58,9 @@ export default {
       })
     },
     deleteProduct () {
-      this.$store.dispatch('deleteProduct')
+      this.$store.dispatch('deleteProduct', {
+        id: this.$route.params.id
+      })
     }
   },
   created () {
