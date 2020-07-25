@@ -47,7 +47,10 @@ export default {
           })
         })
         .catch(err => {
-          console.log(err.response)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response.data.errors}`
+          })
         })
     },
     googlesignin () {
