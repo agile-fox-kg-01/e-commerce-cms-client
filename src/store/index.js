@@ -14,6 +14,9 @@ export default new Vuex.Store({
     FETCHPRODUCTS (state, payload) {
       state.products = payload
     },
+    RESETPRODUCTS (state) {
+      state.products = []
+    },
     FETCHONEPRODUCT (state, payload) {
       state.product = payload
     },
@@ -37,6 +40,7 @@ export default new Vuex.Store({
           commit('FETCHPRODUCTS', res.data)
         })
         .catch(err => {
+          commit('RESETPRODUCTS')
           Swal.fire({
             icon: 'error',
             title: `Oops...${err.response.data.errors}`,
@@ -56,7 +60,10 @@ export default new Vuex.Store({
           commit('FETCHONEPRODUCT', res.data)
         })
         .catch(err => {
-          console.log(err.response)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response.data.errors}`
+          })
         })
     },
     editProduct ({ commit }, payload) {
@@ -83,7 +90,10 @@ export default new Vuex.Store({
           })
         })
         .catch(err => {
-          console.log(err.response)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response.data.errors}`
+          })
         })
     },
     addProduct ({ commit }, payload) {
@@ -111,7 +121,10 @@ export default new Vuex.Store({
           commit('ADDPRODUCT', res.data)
         })
         .catch(err => {
-          console.log(err.response)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response.data.errors}`
+          })
         })
     },
     deleteProduct ({ commit }, payload) {
@@ -133,7 +146,10 @@ export default new Vuex.Store({
           commit('DELETEPRODUCT', payload)
         })
         .catch(err => {
-          console.log(err.response)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response.data.errors}`
+          })
         })
     }
   },

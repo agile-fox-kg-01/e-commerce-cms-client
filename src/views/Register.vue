@@ -54,7 +54,7 @@ export default {
         .catch(err => {
           Swal.fire({
             icon: 'error',
-            title: `Oops...${err.response.data.errors.message}`
+            title: `Oops...${err.response.data.errors}`
           })
         })
     }

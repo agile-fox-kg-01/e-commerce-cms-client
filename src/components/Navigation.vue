@@ -44,7 +44,10 @@ export default {
           this.$router.push({ path: '/login' })
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: `Oops...${err.response}`
+          })
         })
     }
   }
