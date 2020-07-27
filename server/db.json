@@ -2,29 +2,29 @@
     "products": [
         {
             "id": 1,
-            "name": "Shampoo",
-            "image_url": "https://unsplash.com/photos/zcbtpjgToUY",
+            "name": "Anjing",
+            "image_url": "https://images.unsplash.com/photo-1595495529420-433e943647d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1896&q=80",
             "price": 10000,
             "stock": 10
         },
         {
             "id": 2,
             "name": "Shampoo2",
-            "image_url": "https://unsplash.com/photos/XPuSiG2u21Y",
+            "image_url": "https://i.pinimg.com/originals/8d/ec/64/8dec648431dee9a323679661ff435bf3.gif",
             "price": 10000,
             "stock": 10
         },
         {
             "id": 3,
             "name": "Shampoo3",
-            "image_url": "https://unsplash.com/photos/3yw_n5rbXMg",
+            "image_url": "https://3.bp.blogspot.com/-Q8mwcELFr0o/W4W2nW4aN8I/AAAAAAAAFp8/WyqcAyL9y3QHiH4JKrSxg3J6omm8jmrlQCLcBGAs/s1600/993AC4455B85818219.gif",
             "price": 10000,
             "stock": 10
         },
         {
             "id": 4,
             "name": "Shampoo4",
-            "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.w3schools.com%2Fw3css%2Fw3css_images.asp&psig=AOvVaw1T68IfBmVik0pbDhNG6PsV&ust=1595507487276000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjhj9ru4OoCFQAAAAAdAAAAABAI",
+            "image_url": "https://i.pinimg.com/originals/c7/12/77/c712778df6d95e662b986bdf920abeac.gif",
             "price": 10000,
             "stock": 10
         }
