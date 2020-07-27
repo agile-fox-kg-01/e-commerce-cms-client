@@ -106,4 +106,7 @@ export default {
   margin-top:10px;
   color: white;
 }
+.myinput {
+  border: 0 0 2px 0;
+}
 </style>

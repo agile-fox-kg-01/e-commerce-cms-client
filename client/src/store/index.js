@@ -34,17 +34,16 @@ export default new Vuex.Store({
         .catch(console.log)
     },
     fetchProduct ({ commit }, payload) {
-      console.log(localStorage.getItem('token'))
+      // console.log(localStorage.getItem('token'))
       axios({
         methods: 'GET',
         url: `/products/${payload.id}`,
         headers: {
           token: localStorage.getItem('token')
         }
-
       })
         .then(({ data }) => {
-          console.log(data)
+          // console.log(data)
           commit('FETCH_PRODUCT', data)
         })
         .catch(console.log)
@@ -64,7 +63,7 @@ export default new Vuex.Store({
         .catch(console.log)
     },
     updateProduct (_, payload) {
-      console.log(payload)
+      // console.log(payload)
       axios({
         method: 'PATCH',
         url: `/products/${payload.id}`,
@@ -79,13 +78,12 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          this.state.fetchProducts
           router.push({ path: '/products' })
         })
         .catch(console.log)
     },
     deleteProduct (_, payload) {
-      console.log(payload)
+      // console.log(payload)
       axios({
         method: 'DELETE',
         url: `/products/${payload.id}`,
@@ -94,7 +92,6 @@ export default new Vuex.Store({
         }
       })
         .then(({ data }) => {
-          this.$store.state.fetchProduct
           router.push({ path: '/products' })
         })
         .catch(console.log)

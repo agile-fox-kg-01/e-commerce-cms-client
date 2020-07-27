@@ -12,6 +12,10 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    beforeEnter: (to, from, next) => {
+      if (to.name !== 'Login' && !localStorage.getItem('token')) next({ name: 'Login' })
+      else next()
+    },
     children: [
       {
         path: 'products',
@@ -35,7 +39,11 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "user" */ '../views/Login.vue')
+    component: () => import(/* webpackChunkName: "user" */ '../views/Login.vue'),
+    beforeEnter: (to, from, next) => {
+      if (to.name === 'Login' && localStorage.getItem('token')) next({ name: 'Home' })
+      else next()
+    }
   }
 ]
 

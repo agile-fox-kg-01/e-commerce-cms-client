@@ -50,6 +50,9 @@ export default {
     products () {
       return this.$store.state.products
     }
+  },
+  updated () {
+    this.fetchProducts()
   }
 }
 </script>
