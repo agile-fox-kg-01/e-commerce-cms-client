@@ -1,8 +1,9 @@
 <template>
   <div class="row">
     <div class="col-sm-8">
-      <h3>List All Product</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, est. Repellendus nisi voluptatum, placeat commodi laborum vel nesciunt exercitationem nam? </p>
+      <div class="header">
+        <h3>All Product</h3>
+      </div>
 
       <table class="table table-striped">
         <thead>
@@ -12,7 +13,7 @@
             <th scope="col">Product</th>
             <th scope="col">Price</th>
             <th scope="col">Stock</th>
-            <th scope="col">Action</th>
+            <!-- <th scope="col">Action</th> -->
           </tr>
         </thead>
         <tbody>
@@ -58,5 +59,9 @@ export default {
 </script>
 
 <style>
-
+.header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+}
 </style>

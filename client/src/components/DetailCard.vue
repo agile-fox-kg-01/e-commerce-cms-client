@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="width: 18rem; padding-bottom:20px;">
+  <div class="card" style="width: 18rem; padding-bottom:20px; margin-top:20px">
     <div class="mydetailheader">
       <p style="font-size:20px; font-weight:bold;">Detail</p>
       <div @click.prevent="deleteProduct" class="deletebutton">

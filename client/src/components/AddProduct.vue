@@ -1,27 +1,36 @@
 <template>
-  <div class="card" style="width: 40rem;">
-      <div class="mydetailheader">
-        <p>Form Add Product</p>
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="header">
+        <h3>Add Product</h3>
       </div>
-      <form @submit.prevent="addProduct" action="" class="align-center" style="margin:20px" >
-        <div class="form-group">
-          <label for="">Name</label>
-          <input class="form-control" v-model="name" type="text">
-        </div>
-        <div class="form-group">
-          <label for="">Image Url</label>
-          <input class="form-control" v-model="image_url" type="text">
-        </div>
-        <div class="form-group">
-          <label for="">Price</label>
-          <input class="form-control" v-model="price" type="text" >
-        </div>
-        <div class="form-group">
-          <label for="">Stock</label>
-          <input class="form-control" v-model="stock" type="text" >
-        </div>
-        <button type="submit" class="btn btn-info">Add Product</button>
-      </form>
+      <div class="card" style="width: 40rem;">
+          <div class="mydetailheader">
+            <p>Form Add Product</p>
+          </div>
+          <form @submit.prevent="addProduct" action="" class="align-center" style="margin:20px;" >
+            <div class="form-group">
+              <label for="">Name</label>
+              <input class="form-control" v-model="name" type="text">
+            </div>
+            <div class="form-group">
+              <label for="">Image Url</label>
+              <input class="form-control" v-model="image_url" type="text">
+            </div>
+            <div class="form-group">
+              <label for="">Price</label>
+              <input class="form-control" v-model="price" type="text" >
+            </div>
+            <div class="form-group">
+              <label for="">Stock</label>
+              <input class="form-control" v-model="stock" type="text" >
+            </div>
+            <button type="submit" class="btn btn-info">Add Product</button>
+          </form>
+      </div>
+    </div>
+    <div class="col-sm-4">
+    </div>
   </div>
 </template>
 

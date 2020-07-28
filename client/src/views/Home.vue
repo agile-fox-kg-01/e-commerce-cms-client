@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <div class="mynavbar">
+    <div class="mynavbar navbar fixed-top">
       <div class="mylogo">
-        <p>MYLOGO</p>
+        <p>E-COMMERSE <span style="font-weight:bold;">CMS</span></p>
       </div>
       <div class="mynavigasi">
-        <a href="" class="btn btn-primary">Created by <img src="../assets/logo.png" alt="" width="30" height="30" ></a>
-        <a href="" class="btn btn-danger" @click.prevent="logout">Logout</a>
+        <!-- <a href="" class="btn btn-primary">Created by <img src="../assets/logo.png" alt="" width="30" height="30" ></a> -->
+        <a href="" class="btn btn-" @click.prevent="logout">Logout</a>
       </div>
     </div>
     <Sidebar />
@@ -32,9 +32,18 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
 .mynavbar {
   /* border: 1px solid blue; */
-  background-color: #bc986a;
+  background-color: #5cdb95;
+  /* background-color: #f3f5f9; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +52,7 @@ export default {
 }
 .mylogo {
   /* border: 1px solid blue; */
+  color: #05386b;
   font-family: 'Rowdies', cursive;
   display: flex;
   align-items: center;
@@ -65,26 +75,6 @@ export default {
 .mynavigasi a:hover {
   margin-left: 10px;
   text-decoration: unset;
-}
-.mysidebar {
-  background-color: #8d8741;
-  display: flex;
-  flex-direction: column;
-  padding-top: 0px;
-  padding-left: 30px ;
-}
-.mysidebar .buttonSidebar {
-  /* border: #f1df13 2px solid; */
-  border-radius: 10px ;
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  /* padding: 10px 20px; */
-}
-.mysidebar a:hover{
-  text-decoration: unset;
-  color: #f1df13;
 }
 .mybutton {
   color: white;
