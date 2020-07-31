@@ -2,7 +2,7 @@
 
   Deploy Here:
 
-[e-commerce-customer](https://aarsandi-ecomm.web.app/)
+[e-commerce-cms-client](https://aarsandi-ecomm.web.app/)
 
 ## Project setup
 ```
