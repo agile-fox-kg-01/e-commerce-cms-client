@@ -88,7 +88,8 @@ export default {
 
 <style scoped>
 .login {
-  padding: 20px;
+  height:100%;
+  text-align: center;
 }
 
 .form-signin {

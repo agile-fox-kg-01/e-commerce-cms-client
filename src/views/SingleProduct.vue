@@ -15,7 +15,7 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="card">
                             <h1>{{ product.name }}</h1>
-                            <h1>{{ product.price }}</h1>
+                            <h1>Rp {{ product.price }}</h1>
                             <h1>{{ product.stock }}</h1>
                         </div>
                     </div>

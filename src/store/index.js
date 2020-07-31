@@ -20,6 +20,10 @@ export default new Vuex.Store({
     FETCHONEPRODUCT (state, payload) {
       state.product = payload
     },
+    EDITPRODUCT (state, payload) {
+      const index = state.products.findIndex(x => x.id === payload.id)
+      state.products.splice(index, 1, payload)
+    },
     ADDPRODUCT (state, payload) {
       state.products.push(payload)
     },
@@ -81,6 +85,7 @@ export default new Vuex.Store({
         }
       })
         .then(res => {
+          commit('EDITPRODUCT', payload)
           Swal.fire({
             position: 'center',
             icon: 'success',

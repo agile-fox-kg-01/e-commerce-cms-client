@@ -68,10 +68,11 @@ export default {
 
 <style scoped>
 .dashboard h1 {
-    margin-top: 20px;
-    font-size: 30px;
-    color: #403866;
-    text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  color: #403866;
+  text-transform: uppercase;
 }
 
 @media (min-width: 100px) {

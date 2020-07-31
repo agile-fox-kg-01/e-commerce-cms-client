@@ -1,7 +1,7 @@
 <template>
   <tr>
     <th scope="row"><a @click="toProductPage" class="btn nav-link">{{ product.name }}</a></th>
-    <td>{{ product.price }}</td>
+    <td>{{ product.price.toLocaleString("id-ID", { style:"currency", currency: "IDR" }) }}</td>
     <td>{{ product.stock }}</td>
     <td class="w-25">
       <a @click="toProductPage" class="btn">
@@ -38,10 +38,10 @@ export default {
 
 <style>
 .img-thumbnail {
-  height: 100px;
-  width: 100;
-  max-width:100px;
+  min-height: 100px;
+  min-width: 100px;
   max-height:100px;
+  max-width:100px;
 }
 
 .img-thumbnail:hover {

@@ -1,16 +1,11 @@
 <template>
   <div class="register">
     <form class="form-signin" @submit.prevent="register">
-      <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+      <h1 class="h3 mb-3">Register as Admin</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input v-model="data.email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
       <label for="inputPassword" class="sr-only">Password</label>
       <input v-model="data.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-      <select v-model="data.role" type="text" id="role" class="form-control mb-3" placeholder="role" required="">
-        <option selected disabled>Role...</option>
-        <option>admin</option>
-        <option>customer</option>
-      </select>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
       <h3>or</h3>
       <router-link to="/login" class="btn btn-lg btn-primary btn-block">Login</router-link>
@@ -29,7 +24,7 @@ export default {
       data: {
         email: '',
         password: '',
-        role: ''
+        role: 'admin'
       }
     }
   },
@@ -41,8 +36,7 @@ export default {
         data: this.data
       })
         .then(res => {
-          localStorage.setItem('token', res.data.token)
-          this.$router.push({ path: '/' })
+          this.$router.push({ path: '/login' })
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -63,12 +57,17 @@ export default {
 </script>
 
 <style scoped>
+.register {
+  height:100%;
+  text-align: center;
+}
+
 .form-signin {
-    width: 100%;
-    max-width: 460px;
-    padding: 15px;
-    padding-top: 50px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 460px;
+  padding: 15px;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 
 .form-signin h1 {
